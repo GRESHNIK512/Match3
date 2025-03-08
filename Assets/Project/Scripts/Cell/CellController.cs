@@ -5,29 +5,32 @@ using UnityEngine.UI;
 public class CellController : MonoBehaviour
 {
     [SerializeField] public List<Color> _availableColors;
+    [SerializeField] private Transform _animationCanvas;
+
     private List<int> _colors = new List<int>();
 
     private List<Cell> _cells = new();
 
-    [SerializeField] private Cell _firstCell;
-    [SerializeField] private Cell _secondCell;
+    private Cell _firstCell;
+    private Cell _secondCell;
 
     private List<CellInfo> _horizontalCells = new();
     private List<CellInfo> _verticalCells = new();
     private List<CellInfo> _allCellInfo = new();
 
-    [SerializeField] private List<int> _indexHorizontalLineChek = new();
-    [SerializeField] private List<int> _indexVerticalLineChek = new();
+    private List<int> _indexHorizontalLineChek = new();
+    private List<int> _indexVerticalLineChek = new();
+
     private List<Cell> _cellsReColor = new();
     private List<Image> destroyedImages = new();
 
     public int BusySwapCount { get; set; }
 
-    int _countMiss;
+    int _countIgnore;
 
 
     private void Update()
-    { 
+    {
         if (Input.GetMouseButtonUp(0)) Invoke(nameof(ResetSelection), 0.1f);
     }
 
@@ -91,16 +94,18 @@ public class CellController : MonoBehaviour
 
     private void SwapCells(Cell cell1, Cell cell2)
     {
-        var imageCell1 = cell1.FigureImage;
-        var colorCell1 = cell1.ColorNumber;
+        var tempImageCell1 = cell1.FigureImage;
+        var tempColorCell1 = cell1.ColorNumber;
+
+        BusySwapCount += 2;
 
         cell1.FigureImage = cell2.FigureImage;
         cell1.SetColor(cell2.ColorNumber);
-        cell1.MoveFigureImageToOriginalPosition(10, true);
+        cell1.MoveFigureImageToOriginalPosition(0.25f, false);
 
-        cell2.FigureImage = imageCell1;
-        cell2.SetColor(colorCell1);
-        cell2.MoveFigureImageToOriginalPosition(10, true);
+        cell2.FigureImage = tempImageCell1;
+        cell2.SetColor(tempColorCell1);
+        cell2.MoveFigureImageToOriginalPosition(0.25f, true);
 
         ResetSelection();  // Сбрасываем выбор
     }
@@ -113,6 +118,7 @@ public class CellController : MonoBehaviour
 
     private void DoFakeAnimation()
     {
+        BusySwapCount += 2;
         _firstCell.FakeSwapAnimation(_secondCell.GetAnchoredImagePosition(), 0.25f);
         _secondCell.FakeSwapAnimation(_firstCell.GetAnchoredImagePosition(), 0.25f);
     }
@@ -121,7 +127,7 @@ public class CellController : MonoBehaviour
     {
         foreach (var cell in _cells)
         {
-            cell.RemoveParent();
+            cell.SetparentForImage(_animationCanvas);
         }
     }
 
@@ -211,7 +217,7 @@ public class CellController : MonoBehaviour
         return false;
     }
 
-    public void TryCellDestroy()
+    public void SearchCellToMatch()
     {
         if (BusySwapCount == 0)
         {
@@ -283,7 +289,8 @@ public class CellController : MonoBehaviour
 
                     targeCell.FigureImage = line.Cells[i].FigureImage;
                     targeCell.ColorNumber = line.Cells[i].ColorNumber;
-                    targeCell.MoveFigureImageToOriginalPosition(10, true);
+                    ++BusySwapCount;
+                    targeCell.MoveFigureImageToOriginalPosition(0.8f, true);
                 }
             }
 
@@ -297,7 +304,10 @@ public class CellController : MonoBehaviour
                     cell.SetRandomColor();
 
                     cell.SetImageFigurePosition(line.Cells[0].GetOriginalPosition() + new Vector2(0, (j + 1) * cell.RecTranform.sizeDelta.y));
-                    cell.MoveFigureImageToOriginalPosition(10, true);
+
+                    ++BusySwapCount;
+                    cell.MoveFigureImageToOriginalPosition(0.8f, true);
+
                     --j;
                     if (j < 0) break;
                 }
@@ -307,13 +317,13 @@ public class CellController : MonoBehaviour
 
     private int GetRandomColorWithoutRepetition(int x, int y)
     {
-        _countMiss = 0;
+        _countIgnore = 0;
 
         if (x >= 2)
         {
             int left1 = GetColorByCoordinate(x - 1, y);
             int left2 = GetColorByCoordinate(x - 2, y);
-           
+
             if (left1 == left2)
             {
                 // Перемещаем "запрещенный" цвет в конец списка
@@ -326,7 +336,7 @@ public class CellController : MonoBehaviour
         {
             int up1 = GetColorByCoordinate(x, y - 1);
             int up2 = GetColorByCoordinate(x, y - 2);
-          
+
             if (up1 == up2)
             {
                 // Перемещаем "запрещенный" цвет в конец списка
@@ -334,14 +344,14 @@ public class CellController : MonoBehaviour
             }
         }
 
-        int randomIndex = Random.Range(0, _colors.Count - _countMiss);
+        int randomIndex = Random.Range(0, _colors.Count - _countIgnore);
 
         return _colors[randomIndex];
     }
 
     private void MoveToEnd(List<int> list, int colorNumber)
     {
-        ++_countMiss;
+        ++_countIgnore;
         list.Remove(colorNumber);
         list.Add(colorNumber);
     }
@@ -349,7 +359,7 @@ public class CellController : MonoBehaviour
     private int GetColorByCoordinate(int x, int y)
     {
         int color = 0;
-      
+
         foreach (var cell in _cells)
         {
             if (cell.PosX == x && cell.PosY == y)

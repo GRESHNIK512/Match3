@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Cell : MonoBehaviour, IPointerEnterHandler
+public class Cell : MonoBehaviour//, IPointerEnterHandler
 {
     public int ColorNumber { get; set; } = -1;
     public int PosX { get; private set; }
@@ -15,12 +15,14 @@ public class Cell : MonoBehaviour, IPointerEnterHandler
     [SerializeField] private RectTransform _rectTransform;
     public RectTransform RecTranform => _rectTransform;
 
-    [SerializeField] private Image figureImage;
+    [SerializeField] private Image _figureImage;
+    [SerializeField] private Image _cellIBackgroundImage;
+    [SerializeField] private BoxCollider2D _boxCollider2D;
 
     public Image FigureImage
     {
-        get { return figureImage; }
-        set { figureImage = value; }
+        get { return _figureImage; }
+        set { _figureImage = value; }
     }
 
     private CellController _cellController;
@@ -46,13 +48,7 @@ public class Cell : MonoBehaviour, IPointerEnterHandler
     {
         _rectTransform.localPosition = pos;
         _rectTransform.sizeDelta = size;
-
-    }
-
-    public void RemoveParent()
-    {
-        FigureImage.transform.SetParent(transform.parent);
-        _originalPosition = FigureImage.rectTransform.anchoredPosition;
+        _boxCollider2D.size = size;
     }
 
     public void SetColor(int colorNumber)
@@ -68,28 +64,21 @@ public class Cell : MonoBehaviour, IPointerEnterHandler
         FigureImage.color = _cellController._availableColors[ColorNumber];
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    void OnMouseEnter()
     {
-
         _cellController.OnCellClicked(this);
     }
 
     public void FakeSwapAnimation(Vector2 targetPosition, float duration)
     {
-        ++_cellController.BusySwapCount;
-
         FigureImage.rectTransform.DOAnchorPos(targetPosition, duration)
             .SetEase(Ease.InOutQuad)
             .OnComplete(() =>
             {
-                FigureImage.rectTransform.DOAnchorPos(_originalPosition, duration)
-                    .SetEase(Ease.InOutQuad)
-                    .OnComplete(() =>
-                    {
-                        --_cellController.BusySwapCount;
-                    });
+                MoveFigureImageToOriginalPosition(duration, false);
             });
     }
+
     public Vector2 GetOriginalPosition()
     {
         return _originalPosition;
@@ -105,16 +94,14 @@ public class Cell : MonoBehaviour, IPointerEnterHandler
         FigureImage.rectTransform.anchoredPosition = pos;
     }
 
-    public void MoveFigureImageToOriginalPosition(float durationScale, bool needDestroy)
+    public void MoveFigureImageToOriginalPosition(float duration, bool searchMatch)
     {
-        ++_cellController.BusySwapCount;
-
-        FigureImage.rectTransform.DOAnchorPos(_originalPosition, 0.125f * durationScale)
+        FigureImage.rectTransform.DOAnchorPos(_originalPosition, duration)
            .SetEase(Ease.InOutQuad)
            .OnComplete(() =>
            {
                --_cellController.BusySwapCount;
-               if (needDestroy) _cellController.TryCellDestroy();
+               if (searchMatch) _cellController.SearchCellToMatch();
            });
     }
 
@@ -125,5 +112,11 @@ public class Cell : MonoBehaviour, IPointerEnterHandler
             FigureImage.enabled = false;
             HasPuffed = true;
         }
+    }
+
+    public void SetparentForImage(Transform targetparent)
+    {
+        _figureImage.transform.SetParent(targetparent);
+        _originalPosition = FigureImage.rectTransform.anchoredPosition;
     }
 }

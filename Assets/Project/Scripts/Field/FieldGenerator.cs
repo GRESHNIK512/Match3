@@ -1,25 +1,32 @@
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FieldGenerator : MonoBehaviour
 {
-    [SerializeField] private RectTransform _canvasRectTranform;
     [Min(3)]
     [SerializeField] private int _lengthField;
 
     [Min(3)]
     [SerializeField] private int _heightField;
 
-    [SerializeField] private Cell _fieldCellPrefab; // Префаб клетки 
     [SerializeField] private float _cellSpacing = 1.1f;
 
-    [Range(0.1f, 0.99f)]
+    [Range(0.1f, 1f)]
     [SerializeField] private float _maxWidthPercentage = 0.8f; // Максимальная ширина поля в процентах от ширины экрана
 
-    [Range(0.1f, 0.99f)]
+    [Range(0.1f, 1f)]
     [SerializeField] private float _maxHeightPercentage = 0.8f; // Максимальная высота поля в процентах от высоты экрана
 
+    [SerializeField] private RectTransform _canvasRectTranform;
+
+    [SerializeField] private Cell _fieldCellPrefab; // Префаб клетки 
+
     [SerializeField] private CellController _cellController;
+
+    [SerializeField] private RectTransform _backGroundMaskTransform;
+
+    [SerializeField] private Transform _cells;
 
     private void Start()
     {
@@ -49,6 +56,8 @@ public class FieldGenerator : MonoBehaviour
         float totalWidth = _lengthField * (cellWidth + _cellSpacing);
         float totalHeight = _heightField * (cellHeight + _cellSpacing);
 
+        _backGroundMaskTransform.sizeDelta = new Vector2(totalWidth, totalHeight);
+
         // Начальная позиция для первой клетки (верхний левый угол)
         Vector2 startPosition = new Vector2(-totalWidth / 2 + cellWidth / 2, totalHeight / 2 - cellHeight / 2);
 
@@ -59,13 +68,12 @@ public class FieldGenerator : MonoBehaviour
             {
                 // Рассчитываем позицию для каждой клетки
                 Vector2 cellPosition = startPosition + new Vector2(x * (cellWidth + _cellSpacing), -y * (cellHeight + _cellSpacing));
-                var cell = Instantiate(_fieldCellPrefab, transform);
+                var cell = Instantiate(_fieldCellPrefab, _cells);
 
                 // Устанавливаем позицию и размер клетки 
                 cell.SetNewName($"Cell_({x};{y})");
                 cell.SetCellCoordinate(x, y);
                 cell.SetStartPositonAndSize(cellPosition, new Vector2(cellWidth, cellHeight));
-
                 _cellController.AddCell(cell);
             }
         }
