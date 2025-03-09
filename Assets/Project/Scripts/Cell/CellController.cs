@@ -3,9 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CellController : MonoBehaviour
-{
-    public int BusySwapCount { get; set; }
-
+{ 
     [SerializeField] private List<Color> _availableColors;
     [SerializeField] private Transform _animationCanvas;
 
@@ -24,7 +22,9 @@ public class CellController : MonoBehaviour
     private List<int> _indexVerticalLineChek = new();
 
     private List<Cell> _cellsReColor = new();
-    private List<Image> destroyedImages = new(); 
+    private List<Image> destroyedImages = new();
+
+    private int _busySwapCount = 0; 
 
     public void Init(int lineÑount, int columnCout)
     {
@@ -50,7 +50,7 @@ public class CellController : MonoBehaviour
 
     public void OnCellClicked(Cell cell)
     {
-        if (_firstCell == cell || BusySwapCount > 0)
+        if (_firstCell == cell || _busySwapCount > 0)
         {
             ResetSelection();
             return;
@@ -86,7 +86,7 @@ public class CellController : MonoBehaviour
         var tempImageCell1 = cell1.FigureImage;
         var tempColorCell1 = cell1.ColorNumber;
 
-        BusySwapCount += 2;
+        _busySwapCount += 2;
 
         cell1.FigureImage = cell2.FigureImage;
         cell1.SetColor(cell2.ColorNumber, _availableColors);
@@ -107,13 +107,13 @@ public class CellController : MonoBehaviour
 
     private void DoFakeAnimation()
     {
-        BusySwapCount += 2;
+        _busySwapCount += 2;
         _firstCell.FakeSwapAnimation(_secondCell.GetAnchoredImagePosition(), 0.25f);
         _secondCell.FakeSwapAnimation(_firstCell.GetAnchoredImagePosition(), 0.25f);
     }
     public void OnMoveComplete(bool searchMatch)
     {
-        --BusySwapCount;
+        --_busySwapCount;
         if (searchMatch)
             SearchCellToMatch();
     }
@@ -206,7 +206,7 @@ public class CellController : MonoBehaviour
 
     public void SearchCellToMatch()
     {
-        if (BusySwapCount == 0)
+        if (_busySwapCount == 0)
         {
             if (_allCellInfo.Count == 0)
             {
@@ -272,7 +272,7 @@ public class CellController : MonoBehaviour
 
                     targeCell.FigureImage = line.Cells[i].FigureImage;
                     targeCell.ColorNumber = line.Cells[i].ColorNumber;
-                    ++BusySwapCount;
+                    ++_busySwapCount;
                     targeCell.MoveFigureImageToOriginalPosition(0.8f, true);
                 }
             }
@@ -286,7 +286,7 @@ public class CellController : MonoBehaviour
                     cell.FigureImage = destroyedImages[j];
                     cell.SetRandomColor(_availableColors);
                     cell.SetImageFigurePosition(line.Cells[0].GetOriginalPosition() + new Vector2(0, (j + 1) * cell.RecTranform.sizeDelta.y));
-                    ++BusySwapCount;
+                    ++_busySwapCount;
                     cell.MoveFigureImageToOriginalPosition(0.8f, true);
 
                     if (--j < 0) break;

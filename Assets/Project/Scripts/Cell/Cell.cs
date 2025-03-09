@@ -7,9 +7,10 @@ using System.Collections.Generic;
 public class Cell : MonoBehaviour, IPointerEnterHandler
 {
     public int ColorNumber { get; set; } = -1;
-    public int PosX { get; private set; }
-    public int PosY { get; private set; }
     public bool HasPuffed { get; set; }
+  
+    public int PosX { get; private set; }
+    public int PosY { get; private set; } 
 
     public Image FigureImage
     {
