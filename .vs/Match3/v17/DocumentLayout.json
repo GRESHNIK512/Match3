@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\3Project\\Match3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|d:\\3project\\match3\\assets\\project\\scripts\\inputservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\inputservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\cell\\cellcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\cell\\cellcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\field\\fieldgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\field\\fieldgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\cell\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\cell\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|d:\\3project\\match3\\assets\\project\\scripts\\cell\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\cell\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\field\\fieldgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\field\\fieldgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\root.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Root.cs",
               "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Root.cs",
               "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Root.cs",
@@ -42,29 +46,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "FieldGenerator.cs",
               "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Field\\FieldGenerator.cs",
               "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Field\\FieldGenerator.cs",
               "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Field\\FieldGenerator.cs",
               "RelativeToolTip": "Assets\\Project\\Scripts\\Field\\FieldGenerator.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwDYAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAuwDsAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T07:10:36.661Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T07:10:36.661Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CellController.cs",
               "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Cell\\CellController.cs",
               "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Cell\\CellController.cs",
               "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Cell\\CellController.cs",
               "RelativeToolTip": "Assets\\Project\\Scripts\\Cell\\CellController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAMwGUAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T08:16:21.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T08:16:21.06Z"
             },
             {
               "$type": "Document",
@@ -74,9 +76,21 @@
               "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Cell\\Cell.cs",
               "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Cell\\Cell.cs",
               "RelativeToolTip": "Assets\\Project\\Scripts\\Cell\\Cell.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAgwIAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T07:16:54.63Z",
+              "WhenOpened": "2025-03-06T07:16:54.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InputService.cs",
+              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\InputService.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\InputService.cs",
+              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\InputService.cs",
+              "RelativeToolTip": "Assets\\Project\\Scripts\\InputService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T21:03:00.812Z",
               "EditorCaption": ""
             }
           ]

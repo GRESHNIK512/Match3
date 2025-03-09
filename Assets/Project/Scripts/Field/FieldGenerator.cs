@@ -1,12 +1,10 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class FieldGenerator : MonoBehaviour
 {
     [Min(3)]
     [SerializeField] private int _lengthField;
-
     [Min(3)]
     [SerializeField] private int _heightField;
 
@@ -14,18 +12,13 @@ public class FieldGenerator : MonoBehaviour
 
     [Range(0.1f, 1f)]
     [SerializeField] private float _maxWidthPercentage = 0.8f; // Максимальная ширина поля в процентах от ширины экрана
-
     [Range(0.1f, 1f)]
     [SerializeField] private float _maxHeightPercentage = 0.8f; // Максимальная высота поля в процентах от высоты экрана
 
     [SerializeField] private RectTransform _canvasRectTranform;
-
     [SerializeField] private Cell _fieldCellPrefab; // Префаб клетки 
-
     [SerializeField] private CellController _cellController;
-
     [SerializeField] private RectTransform _backGroundMaskTransform;
-
     [SerializeField] private Transform _cells;
 
     private void Start()
@@ -70,10 +63,8 @@ public class FieldGenerator : MonoBehaviour
                 Vector2 cellPosition = startPosition + new Vector2(x * (cellWidth + _cellSpacing), -y * (cellHeight + _cellSpacing));
                 var cell = Instantiate(_fieldCellPrefab, _cells);
 
-                // Устанавливаем позицию и размер клетки 
-                cell.SetNewName($"Cell_({x};{y})");
-                cell.SetCellCoordinate(x, y);
-                cell.SetStartPositonAndSize(cellPosition, new Vector2(cellWidth, cellHeight));
+                // Устанавливаем позицию и размер клетки   
+                cell.Init(x, y, cellPosition, new Vector2(cellWidth, cellHeight), _cellController);
                 _cellController.AddCell(cell);
             }
         }

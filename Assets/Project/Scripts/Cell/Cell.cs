@@ -1,82 +1,85 @@
 using DG.Tweening;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
-public class Cell : MonoBehaviour//, IPointerEnterHandler
+public class Cell : MonoBehaviour, IPointerEnterHandler
 {
     public int ColorNumber { get; set; } = -1;
     public int PosX { get; private set; }
     public int PosY { get; private set; }
-
     public bool HasPuffed { get; set; }
-
-    [SerializeField] private RectTransform _rectTransform;
-    public RectTransform RecTranform => _rectTransform;
-
-    [SerializeField] private Image _figureImage;
-    [SerializeField] private Image _cellIBackgroundImage;
-    [SerializeField] private BoxCollider2D _boxCollider2D;
 
     public Image FigureImage
     {
         get { return _figureImage; }
         set { _figureImage = value; }
     }
+    [SerializeField] private Image _figureImage;
+
+    public RectTransform RecTranform => _rectTransform;
+    [SerializeField] private RectTransform _rectTransform;
 
     private CellController _cellController;
     private Vector2 _originalPosition;
 
-    private void OnEnable()
-    {
-        _cellController = FindObjectOfType<CellController>();
-    }
 
-    public void SetNewName(string name)
-    {
-        gameObject.name = name;
-    }
-
-    public void SetCellCoordinate(int x, int y)
+    public void Init(int x, int y, Vector2 position, Vector2 size, CellController cellController)
     {
         PosX = x;
         PosY = y;
-    }
-
-    public void SetStartPositonAndSize(Vector2 pos, Vector2 size)
-    {
-        _rectTransform.localPosition = pos;
+       
+        _rectTransform.localPosition = position;
         _rectTransform.sizeDelta = size;
-        _boxCollider2D.size = size;
+       
+        _originalPosition = _figureImage.rectTransform.anchoredPosition;
+        
+        _cellController = cellController;
     }
 
-    public void SetColor(int colorNumber)
+    public void SetColor(int colorNumber, List<Color> availableColors)
     {
         ColorNumber = colorNumber;
-        FigureImage.color = _cellController._availableColors[colorNumber];
+       
+        _figureImage.color = availableColors[colorNumber];
     }
 
-    public void SetRandomColor()
+    public void SetRandomColor(List<Color> availableColors)
     {
-        ColorNumber = Random.Range(0, _cellController._availableColors.Count);
-        FigureImage.enabled = true;
-        FigureImage.color = _cellController._availableColors[ColorNumber];
+        ColorNumber = Random.Range(0, availableColors.Count);
+       
+        _figureImage.enabled = true;
+        _figureImage.color = availableColors[ColorNumber];
     }
 
-    void OnMouseEnter()
+    public void SetParentForImage(Transform targetparent)
     {
-        _cellController.OnCellClicked(this);
+        _figureImage.transform.SetParent(targetparent);
+        _originalPosition = _figureImage.rectTransform.anchoredPosition;
     }
 
     public void FakeSwapAnimation(Vector2 targetPosition, float duration)
     {
-        FigureImage.rectTransform.DOAnchorPos(targetPosition, duration)
+        _figureImage.rectTransform.DOAnchorPos(targetPosition, duration)
             .SetEase(Ease.InOutQuad)
-            .OnComplete(() =>
-            {
-                MoveFigureImageToOriginalPosition(duration, false);
-            });
+            .OnComplete(() => MoveFigureImageToOriginalPosition(duration, false));
+    }
+
+    public void MoveFigureImageToOriginalPosition(float duration, bool searchMatch)
+    {
+        _figureImage.rectTransform.DOAnchorPos(_originalPosition, duration)
+           .SetEase(Ease.InOutQuad)
+           .OnComplete(() => _cellController?.OnMoveComplete(searchMatch));
+    }
+
+    public void Puff()
+    {
+        if (!HasPuffed)
+        {
+            _figureImage.enabled = false;
+            HasPuffed = true;
+        }
     }
 
     public Vector2 GetOriginalPosition()
@@ -86,37 +89,16 @@ public class Cell : MonoBehaviour//, IPointerEnterHandler
 
     public Vector2 GetAnchoredImagePosition()
     {
-        return FigureImage.rectTransform.anchoredPosition;
+        return _figureImage.rectTransform.anchoredPosition;
     }
 
     public void SetImageFigurePosition(Vector2 pos)
     {
-        FigureImage.rectTransform.anchoredPosition = pos;
+        _figureImage.rectTransform.anchoredPosition = pos;
     }
 
-    public void MoveFigureImageToOriginalPosition(float duration, bool searchMatch)
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        FigureImage.rectTransform.DOAnchorPos(_originalPosition, duration)
-           .SetEase(Ease.InOutQuad)
-           .OnComplete(() =>
-           {
-               --_cellController.BusySwapCount;
-               if (searchMatch) _cellController.SearchCellToMatch();
-           });
-    }
-
-    public void Puff()
-    {
-        if (!HasPuffed)
-        {
-            FigureImage.enabled = false;
-            HasPuffed = true;
-        }
-    }
-
-    public void SetparentForImage(Transform targetparent)
-    {
-        _figureImage.transform.SetParent(targetparent);
-        _originalPosition = FigureImage.rectTransform.anchoredPosition;
+        _cellController.OnCellClicked(this);
     }
 }
