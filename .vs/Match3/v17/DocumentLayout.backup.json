@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "D:\\3Project\\Match3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\field\\fieldgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\field\\fieldgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\cell\\fieldcellmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\cell\\fieldcellmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\cell\\cellcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\cell\\cellcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\crystals\\crystalmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\crystals\\crystalmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\cell\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\cell\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\field\\gamefieldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\field\\gamefieldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|d:\\3project\\match3\\assets\\project\\scripts\\inputservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\inputservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\field\\gamefieldmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\field\\gamefieldmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\root.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\root.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\field\\gamefieldview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\field\\gamefieldview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|d:\\3project\\match3\\assets\\project\\scripts\\cell\\fieldcellview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\cell\\fieldcellview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\service\\inputservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\service\\inputservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|D:\\3Project\\Match3\\assets\\project\\scripts\\crystals\\crystalview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\crystals\\crystalview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|d:\\3project\\match3\\assets\\project\\scripts\\service\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6F049EB-439F-80BB-E5E4-CA562DF38555}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\scripts\\service\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,71 +45,130 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 292,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Root.cs",
-              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Root.cs",
-              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Root.cs",
-              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Root.cs",
-              "RelativeToolTip": "Assets\\Project\\Scripts\\Root.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T11:23:37.428Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FieldGenerator.cs",
-              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Field\\FieldGenerator.cs",
-              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Field\\FieldGenerator.cs",
-              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Field\\FieldGenerator.cs",
-              "RelativeToolTip": "Assets\\Project\\Scripts\\Field\\FieldGenerator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAIwDsAAABVAAAAAAAAAA==",
+              "Title": "FieldCellModel.cs",
+              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Cell\\FieldCellModel.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Cell\\FieldCellModel.cs",
+              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Cell\\FieldCellModel.cs",
+              "RelativeToolTip": "Assets\\Project\\Scripts\\Cell\\FieldCellModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T07:10:36.661Z",
+              "WhenOpened": "2025-03-14T11:06:43.248Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CellController.cs",
-              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Cell\\CellController.cs",
-              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Cell\\CellController.cs",
-              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Cell\\CellController.cs",
-              "RelativeToolTip": "Assets\\Project\\Scripts\\Cell\\CellController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAANUAAAA2AAAAAAAAAA==",
+              "Title": "CrystalModel.cs",
+              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Crystals\\CrystalModel.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Crystals\\CrystalModel.cs",
+              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Crystals\\CrystalModel.cs",
+              "RelativeToolTip": "Assets\\Project\\Scripts\\Crystals\\CrystalModel.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAqwCcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T08:16:21.06Z",
+              "WhenOpened": "2025-03-17T07:15:40.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Cell.cs",
-              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Cell\\Cell.cs",
-              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Cell\\Cell.cs",
-              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Cell\\Cell.cs",
-              "RelativeToolTip": "Assets\\Project\\Scripts\\Cell\\Cell.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Title": "GameFieldController.cs",
+              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Field\\GameFieldController.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Field\\GameFieldController.cs",
+              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Field\\GameFieldController.cs",
+              "RelativeToolTip": "Assets\\Project\\Scripts\\Field\\GameFieldController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T07:16:54.63Z",
+              "WhenOpened": "2025-03-15T23:23:30.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GameService.cs",
+              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Service\\GameService.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Service\\GameService.cs",
+              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Service\\GameService.cs",
+              "RelativeToolTip": "Assets\\Project\\Scripts\\Service\\GameService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T23:29:32.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "InputService.cs",
-              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\InputService.cs",
-              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\InputService.cs",
-              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\InputService.cs",
-              "RelativeToolTip": "Assets\\Project\\Scripts\\InputService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Title": "GameFieldModel.cs",
+              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Field\\GameFieldModel.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Field\\GameFieldModel.cs",
+              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Field\\GameFieldModel.cs",
+              "RelativeToolTip": "Assets\\Project\\Scripts\\Field\\GameFieldModel.cs",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAYwKMBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T21:03:00.812Z",
+              "WhenOpened": "2025-03-14T10:45:02.75Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 280,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameFieldView.cs",
+              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Field\\GameFieldView.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Field\\GameFieldView.cs",
+              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Field\\GameFieldView.cs",
+              "RelativeToolTip": "Assets\\Project\\Scripts\\Field\\GameFieldView.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwB0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T12:24:00.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FieldCellView.cs",
+              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Cell\\FieldCellView.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Cell\\FieldCellView.cs",
+              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Cell\\FieldCellView.cs",
+              "RelativeToolTip": "Assets\\Project\\Scripts\\Cell\\FieldCellView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:51:34.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CrystalView.cs",
+              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Crystals\\CrystalView.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Crystals\\CrystalView.cs",
+              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Crystals\\CrystalView.cs",
+              "RelativeToolTip": "Assets\\Project\\Scripts\\Crystals\\CrystalView.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwCoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T07:16:01.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InputService.cs",
+              "DocumentMoniker": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Service\\InputService.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Scripts\\Service\\InputService.cs",
+              "ToolTip": "D:\\3Project\\Match3\\Assets\\Project\\Scripts\\Service\\InputService.cs",
+              "RelativeToolTip": "Assets\\Project\\Scripts\\Service\\InputService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T17:43:41.15Z",
               "EditorCaption": ""
             }
           ]
